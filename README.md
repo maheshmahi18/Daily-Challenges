@@ -1,5 +1,5 @@
 #SkillRack
 
-# Daily-Challenges
+#Daily-Challenges
 
 #Sollutions
