@@ -1,0 +1,68 @@
+Split into Two Lines -String
+
+
+The program must accept a string 5 and print the string value in two lines in zig zag pattern as shown in the Example Input/Output section.
+
+Boundary Condition(s): 
+
+2 <= Length of S <= 100
+
+
+Input Format:
+
+The first line contains the string S.
+
+
+Output Format:
+
+The first two lines contain the desired pattern as shown in the Example Input/Output section.
+
+
+Example Input/Output 1:
+
+Input:
+
+abcdefg
+
+
+Output:
+
+a*c*e*g
+b*d*f
+
+
+Example Input/Output 2:
+
+Input;
+
+blockchain
+
+
+Output:
+
+b*o*k*h*i*
+*l*c*c*a*n
+
+
+
+Sollution: Done in Python
+
+
+//Your code here
+a=input().strip()
+for i in range(len(a)):
+    if(i%2==0):
+        print(a[i],end="")
+    else:
+        print("*",end="")
+print()
+for i in range(len(a)):
+    if(i%2!=0):
+        print(a[i],end="")
+    else:
+        print("*",end="")
+
+
+
+Code by Mahesh
+
