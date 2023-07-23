@@ -1,0 +1,51 @@
+Odd or Even - FIB
+
+
+Fill in the missing lines of code so that the program accepts an integer N(whose value can be positive or negative) and prints if N is odd or even.
+
+
+Code:
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N;
+    _______________
+    if(N%2 == 1 _____________){
+         printf("odd");
+    }else{
+	 printf("even");
+    }
+    return 0;
+}
+
+Sample Input and Output:
+
+Input 1: -91
+Output 1: odd
+
+Input 2: 2
+Output 2: even
+
+
+
+Sollution:
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    if(N%2 == 1 || N%2 != 0){
+         printf("odd");
+    }else{
+	 printf("even");
+    }
+    return 0;
+}
