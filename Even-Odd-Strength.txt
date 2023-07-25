@@ -1,0 +1,109 @@
+Even/Odd Strength
+
+
+The program must accept N integers as the input. The program must print the output based on the conditions given below.
+
+- If the even integers have occurred more number of times than the odd integers then the program must print even as the output.
+
+- If the odd integers have occurred more number of times than the even integers then the program must print odd as the output.
+
+- If the even integers and the odd integers have occurred equal number of times then the program 
+must print -1 as the output.
+
+Boundary Condition(s):
+
+1 < = N <= 100
+
+1 <= Each Integer Value <= 100
+
+Input Format:
+
+The first line contains the value of N.
+The second line contains N integers separated by space(s).
+
+Output Format:
+
+The first line contains odd or even or -1.
+
+Example Input/Output I:
+
+Input:
+
+10
+1 6 5 3 5 7 8 5 2 3
+
+Output:
+
+odd
+
+Explanation:
+
+The odd integers are 1, 5, 3, 5, 7, 5, 3 and the count is 7
+The even integers are 6, 8, 2 and the count is 3
+Here the odd integers count is maximum
+
+Hence the output is odd
+
+Example Input/Output 2:
+
+Input:
+
+8
+1 2 3 4 5 6 7 8
+
+Output:
+
+-1
+
+
+Sollution: Done in Python
+
+n=int(input())
+a=list(map(int,input().split()))
+b=0;c=0
+for i in a:
+    if(i%2==0):
+        b+=1
+    else:
+        c+=1
+if(b>c):
+    print("even")
+elif(b<c):
+    print("odd")
+elif(b==c):
+    print(-1)
+
+
+Sollution: In Java
+
+import java.util.*;
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int[] a=new int [n];
+    int b=0,c=0;
+    for(int i=0; i<n; i++)
+    {
+      a[i]=sc.nextInt();
+      if(a[i]%2==0)
+        b+=1;
+      else
+        c+=1;
+    }
+    if(b>c){
+      System.out.print("even");
+    }else if(b<c){
+      System.out.print("odd");
+    }else if(b==c){
+      System.out.print(-1);
+    }
+  }
+}
+
+
+Code by Mahesh
