@@ -1,0 +1,78 @@
+Prime and Composite Numbers
+
+The program must accept a positive integer N and print the prime numbers and composite numbers from 2 to N as the output.
+
+Boundary Condition(s):
+
+2 <= N  <= 100
+
+Input Format:
+
+The first line contains N.
+
+Output Format:
+
+The first line contains the prime numbers separated by a space.
+The second line contains the composite numbers separated by a space.
+
+Example Input/Output 1:
+
+Input:
+
+10
+
+Output:
+
+2 3 5 7
+4 6 8 9 10
+
+Example Input/Output 2:
+
+Input:
+
+45
+
+Output:
+
+2 3 5 7 11 13 17 19 23 29 31 37 41 43
+4 6 8 9 10 12 14 15 16 18 20 21 22 24 25 26 27 28 30 32 33 34 35 36 38 39 40 42 44 45
+
+Example Input/Output 3:
+
+Input:
+
+6
+
+Output:
+
+2 3 5
+4 6
+
+
+Sollution: Done in Python
+
+
+def isprime(n):
+    if(n<2):
+        return False
+    for i in range(2,int(n**0.5)+1):
+        if(n%i==0):
+            return False
+    return True
+
+def primeCompo(n):
+    p=[]
+    c=[]
+    for i in range(2,n+1):
+        if(isprime(i)):
+            p.append(str(i))
+        else:
+            c.append(str(i))
+    return " ".join(p)," ".join(c)
+n=int(input())
+pOut,cOut=primeCompo(n)
+print(pOut)
+print(cOut)
+
+
+Code by Mahesh
