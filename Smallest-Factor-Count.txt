@@ -1,0 +1,67 @@
+Smallest Factor Count
+
+
+The program must accept N integers as the input. The program must print the smallest factor count among these N integers.
+
+Boundary Condition(s):
+
+1 <= N <= 100
+
+Input Format:
+
+The first line contains the value of N.
+The second line contains N integers separated by space(s).
+
+Output Format:
+
+The first line contains the smallest factor count among the N integers.
+
+
+Example Input/Output I:
+
+Input:
+4
+10 32 100 60
+
+Output:
+
+4
+
+Explanation:
+The factors of IO are 1, 2, 5 and 10. So its factor count is 4.
+The factors of 32 are 1, 2, 4, 8, 16 and 32. So its factor count is 6.
+The factors of 100 are 1, 2, 4, 5, 10, 20, 25, 50 and 100. So its factor count is 9.
+The factors of 60 are 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60. so its factor count is 12.
+Here the smallest factor count is 4.
+
+Hence the output is 4
+
+
+Example Input/Output 2:
+
+Input:
+
+2
+42 32
+
+Output:
+
+6
+
+
+Sollution: Done in Python
+
+
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in a:
+    c=1
+    for j in range(1,int(i*0.5)+1):
+        if(i%j==0):
+            c+=1
+    b.append(c)
+print(min(b))
+
+
+Code by Mahesh
